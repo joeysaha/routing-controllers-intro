@@ -1,15 +1,15 @@
 class PagesController < ApplicationController
 
   def welcome
-    render :welcome
+    # render :welcome
   end
 
   def about
-    render :about
+    # render :about
   end
 
   def contest
-    render :contest
+    # render :contest
   end
 
 end
