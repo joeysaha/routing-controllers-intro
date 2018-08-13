@@ -44,4 +44,11 @@ class PagesController < ApplicationController
     @kitten_url = "http://placebear.com/#{requested_size}/#{requested_size}"
   end
 
+  def secrets
+    # redirect_to "/welcome" if params[:magic_word] != "carebear"
+    if params[:magic_word] != "carebear"
+      redirect_to "/welcome"
+      flash[:notice] = "Sorry, you're not allowed through this door!"
+    end
+  end
 end
