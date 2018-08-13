@@ -15,4 +15,10 @@ class PagesController < ApplicationController
     @header = "Did somebody say ... contest?!?!?"
   end
 
+  def kitten
+    @header = "You think you're getting a cat.... but you better bear yourself... you're in for a surprise!"
+    requested_size = params[:size]
+    @kitten_url = "http://placebear.com/#{requested_size}/#{requested_size}"
+  end
+
 end
